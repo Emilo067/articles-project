@@ -1,19 +1,23 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, {Suspense} from 'react';
 import './styles/index.scss';
 import {useTheme} from "./providers/ThemeProvider";
 import {classNames} from "shared";
 import {AppRouter} from "app/providers/router/ui/AppRouter";
+import {Navbar, Sidebar} from "widgets";
+import i18next from "i18next";
 
 const App = () => {
-    const {theme, toggleTheme} = useTheme()
+    const {theme} = useTheme()
 
     return (
         <div className={classNames("app", {}, [theme])}>
-            <button onClick={toggleTheme}>TOGGLE</button>
-            <Link to={'/'}>Главная</Link>
-            <Link to={'/about'}>О сайте</Link>
-            <AppRouter/>
+            <Suspense fallback="">
+                <Navbar/>
+                <div className="content-page">
+                    <Sidebar/>
+                    <AppRouter/>
+                </div>
+            </Suspense>
         </div>
     );
 };
