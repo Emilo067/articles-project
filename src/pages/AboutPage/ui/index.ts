@@ -1,1 +1,1 @@
-export * from "./AboutPage.async"
+export * from './AboutPage.async';
