@@ -3,7 +3,6 @@ import './styles/index.scss';
 import { classNames } from 'shared';
 import { AppRouter } from 'app/providers/router/ui/AppRouter';
 import { Navbar, Sidebar } from 'widgets';
-import i18next from 'i18next';
 import { useTheme } from './providers/ThemeProvider';
 
 const App = () => {
