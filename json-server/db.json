@@ -2,12 +2,28 @@
   "posts": [
     {
       "id": 1,
-      "title": "King",
-      "author": "Stephen"
+      "title": "json-server",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "title": "json-server",
+      "userId": 2
     }
   ],
-
-  "profile": {
-    "name": "typicode"
-  }
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "123"
+    }
+  ],
+  "profile": { "name": "typicode" }
 }
