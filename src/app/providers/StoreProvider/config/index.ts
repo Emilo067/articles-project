@@ -1,1 +1,1 @@
-export { StateSchema } from './StateSchema';
+export { ReduxStoreWithManager, StateSchema } from './StateSchema';
