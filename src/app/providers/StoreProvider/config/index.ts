@@ -1,2 +1,4 @@
-export { ReduxStoreWithManager, StateSchema } from './StateSchema';
+export {
+    ReduxStoreWithManager, StateSchema, ThunkExtraArg, ThunkConfig,
+} from './StateSchema';
 export { AppDispatch } from './store';
