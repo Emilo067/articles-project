@@ -1,2 +1,2 @@
 export * from './ui';
-export { StateSchema, ReduxStoreWithManager } from './config';
+export { StateSchema, ReduxStoreWithManager, AppDispatch } from './config';
