@@ -6,6 +6,7 @@
 
 .link {
     margin-left: 10px;
+    opacity: 1;
 }
 
 .icon {
@@ -13,17 +14,6 @@
 }
 
 .collapsed {
-    width: var(--sidebar-width-collapsed);
-
-    .switchers {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .lang {
-        margin: 0;
-    }
-
     .link {
         opacity: 0;
         transition: 0.2s opacity;

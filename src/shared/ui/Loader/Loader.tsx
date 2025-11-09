@@ -5,15 +5,11 @@ interface LoaderProps {
     className?: string;
 }
 
-export const Loader = (props: LoaderProps) => {
-    const { className } = props;
-
-    return (
-        <div className={classNames('lds-ellipsis', {}, [className])}>
-            <div />
-            <div />
-            <div />
-            <div />
-        </div>
-    );
-};
+export const Loader = ({ className }: LoaderProps) => (
+    <div className={classNames('lds-ellipsis', {}, [className])}>
+        <div />
+        <div />
+        <div />
+        <div />
+    </div>
+);

@@ -1,2 +1,2 @@
-export * from './ui';
-export { LoginSchema, loginReducer } from './model';
+export { LoginModal } from './ui/LoginModal/LoginModal';
+export { LoginSchema } from './model/types/loginSchema';
