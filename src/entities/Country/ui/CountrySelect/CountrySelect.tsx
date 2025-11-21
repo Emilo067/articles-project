@@ -1,0 +1,45 @@
+import { classNames } from 'shared/lib/classNames/classNames';
+import { useTranslation } from 'react-i18next';
+import { Select } from 'shared/ui/Select/Select';
+import { Country } from '../../model/types/country';
+
+interface CountrySelectProps {
+    className?: string;
+    value?: Country
+    onChange?: (value: Country) => void
+    readonly?: boolean
+}
+
+const options = [
+    { value: Country.Armenia, content: Country.Armenia },
+    { value: Country.Belarus, content: Country.Belarus },
+    { value: Country.Kazakhstan, content: Country.Kazakhstan },
+    { value: Country.Ukraine, content: Country.Ukraine },
+    { value: Country.Russia, content: Country.Russia },
+];
+
+export const CountrySelect = (props: CountrySelectProps) => {
+    const {
+        className, onChange, value, readonly,
+    } = props;
+    const { t } = useTranslation();
+
+    const onChangeHandler = (value: string) => {
+        onChange?.(value as Country);
+    };
+
+    return (
+        <Select
+            readonly={readonly}
+            label={t('Укажите страну')}
+            className={classNames(
+                '',
+                {},
+                [className],
+            )}
+            value={value}
+            options={options}
+            onChange={onChangeHandler}
+        />
+    );
+};

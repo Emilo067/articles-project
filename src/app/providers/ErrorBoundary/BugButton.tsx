@@ -1,7 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
-import { Button } from 'shared';
+import { Button } from 'shared/ui';
 
 // Компонент для тестирования ErrorBoundary
 export const BugButton = () => {
